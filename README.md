@@ -1,12 +1,14 @@
-# vue-webpack-boilerplate
+# Blacksheepdesign Vue.js Starter Template
 
-> A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
+> We don't reccommend this be used by the public as it's specifically designed around our own development workflow. However feel free to use it as a starting template for your own Vue.js projects if you find the packaged components useful. We reccommend using vuejs-templates/webpack as a more generic starter template.
 
-> This template is Vue 2.0 compatible. For Vue 1.x use this command: `vue init webpack#1.0 my-project`
+> Based on vuejs-templates/webpack, this is a full-featured Webpack setup with hot-reload, lint-on-save & css extraction. It includes packages geared toward creating website applications, so has some useful transition handling, SEO and other tools.
 
 ## Documentation
 
-- [For this template](http://vuejs-templates.github.io/webpack): common questions specific to this template are answered and each part is described in greater detail
+TBD - We are currently working on documentation for this template. For now, most questions can be answered with the webpack/vue template docs below.
+
+- [For the vuejs-templates/webpack](http://vuejs-templates.github.io/webpack): common questions specific to this template are answered and each part is described in greater detail
 - [For Vue 2.0](http://vuejs.org/guide/): general information about how to work with Vue, not specific to this template
 
 ## Usage
