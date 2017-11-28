@@ -27,7 +27,7 @@ The development server will run on port 8080 by default. If that port is already
 
 ## What's Included
 
-- `npm run dev`: first-in-class development experience.
+- `npm run dev`: run a local development environment.
   - Webpack + `vue-loader` for single file Vue components.
   - State preserving hot-reload
   - State preserving compilation error overlay
@@ -43,7 +43,7 @@ The development server will run on port 8080 by default. If that port is already
 
 ### Fork It And Make Your Own
 
-You can fork this repo to create your own boilerplate, and use it with `vue-cli`:
+As with the official webpack template, you can fork this repo to create your own boilerplate, and use it with `vue-cli`:
 
 ``` bash
 vue init username/repo my-project
