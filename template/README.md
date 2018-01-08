@@ -8,6 +8,8 @@
 # install dependencies
 npm install
 
+The following commands will provision Vagrant on their first run.
+
 # serve with hot reload at localhost:8080
 npm run dev
 
