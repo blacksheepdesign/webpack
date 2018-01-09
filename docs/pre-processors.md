@@ -1,19 +1,21 @@
 # Pre-Processors
 
-This boilerplate has pre-configured CSS extraction for most popular CSS pre-processors including LESS, SASS, Stylus, and PostCSS. To use a pre-processor, all you need to do is install the appropriate webpack loader for it. For example, to use SASS:
+This boilerplate has pre-configured CSS extraction for most popular CSS pre-processors including LESS, SASS, Stylus, and PostCSS. Unlike the official template, this one comes pre-installed with SASS loader, as we will almost always style websites using SASS-Lang. 
+
+To use an alternative pre-processor, all you need to do is install the appropriate webpack loader for it.
 
 ``` bash
-npm install sass-loader node-sass --save-dev
+npm install stylus-loader stylus --save-dev
 ```
 
-Note you also need to install `node-sass` because `sass-loader` depends on it as a peer dependency.
+Note you also need to install `stylus` because `stylus-loader` depends on it as a peer dependency.
 
 ### Using Pre-Processors inside Components
 
 Once installed, you can use the pre-processors inside your `*.vue` components using the `lang` attribute on `<style>` tags:
 
 ``` html
-<style lang="scss">
+<style lang="stylus">
 /* write SASS! */
 </style>
 ```

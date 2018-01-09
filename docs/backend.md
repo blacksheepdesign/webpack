@@ -1,5 +1,7 @@
 # Integrating with Backend Framework
 
+:warning: This section will be updated soon to reflect built-in WordPress integration.
+
 If you are building a purely-static app (one that is deployed separately from the backend API), then you probably don't even need to edit `config/index.js`. However, if you want to integrate this template with an existing backend framework, e.g. Rails/Django/Laravel, which comes with their own project structures, you can edit `config/index.js` to directly generate front-end assets into your backend project.
 
 Let's take a look at the default `config/index.js`:
@@ -24,12 +26,12 @@ module.exports = {
   },
   build: {
     // Template for index.html
-    index: path.resolve(__dirname, '../dist/index.html'),
+    index: path.resolve(__dirname, '../html/wp-content/themes/{{ name }}/index.html'),
 
     // Paths
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    assetsRoot: path.resolve(__dirname, '../html/wp-content/themes/{{ name }}'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: '/wp-content/themes/{{ name }}/',
 
     productionSourceMap: true,
     
