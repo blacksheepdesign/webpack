@@ -2,8 +2,10 @@
 
 echo
 
+################
 # Checks to make to ensure the current directory is a project folder
-echo "Checking project..."
+################
+echo "# Checking project ..."
 
 echo
 
@@ -23,13 +25,84 @@ do
 	fi
 done
 
-echo "Downloading latest version of webpack-bsd..."
+################
+# Backup project
+################
+echo "# Creating backup of project ..."
+UNIQDATE=`date +%s`
+
+mkdir -p "/tmp/.webpack-bsd-backup-$UNIQDATE/"
+rsync -r --filter=':- .gitignore' "./" "/tmp/.webpack-bsd-backup-$UNIQDATE/"
+mv "/tmp/.webpack-bsd-backup-$UNIQDATE" ".backup"
+echo
+
+################
+# Download template from Github
+################
+echo "# Downloading latest version of webpack-bsd ..."
 mkdir -p .upgrade/
 cd .upgrade
 curl -sL https://github.com/blacksheepdesign/webpack-bsd/archive/master.tar.gz | tar xz
-
 cd ..
-rm -rf .upgrade/
+echo
+
+################
+# Replace files with new versions
+################
+echo "# Running install script ..."
+echo "# Make sure you use the same settings as in your package.json!"
+echo "# ========================"
+echo
+
+# Get project details
+PACKAGE_NAME=$(cat package.json \
+  | grep name \
+  | head -1 \
+  | awk -F: '{ print $2 }' \
+  | sed 's/[",]//g')
+PACKAGE_DESCRIPTION=$(cat package.json \
+  | grep description \
+  | head -1 \
+  | awk -F: '{ print $2 }' \
+  | sed 's/[",]//g')
+PACKAGE_AUTHOR=$(cat package.json \
+  | grep author \
+  | head -1 \
+  | awk -F: '{ print $2 }' \
+  | sed 's/[",]//g')
+if grep -q lint package.json; then
+	PACKAGE_LINT=true
+else
+	PACKAGE_LINT=false
+fi
+
+echo $PACKAGE_NAME
+echo $PACKAGE_DESCRIPTION
+echo $PACKAGE_LINT
+echo $PACKAGE_AUTHOR
+
+curdir=${PWD##*/}
+curpath=${PWD}
+cd .upgrade/webpack-bsd-master
+npm install
+
+
+cd $curpath
+
+echo $curpath
+
+# mv ./upgrade/bootstrap.sh bootstrap.sh
+# mv ./upgrade/Vagrantfile Vagrantfile
+# mv ./upgrade/wordpress.sh wordpress.sh
+# rm -rf build/
+# mv ./upgrade/build/ build/
+
+
+################
+# Clean up
+################
+# rm -rf .upgrade/
+rm -rf .backup/
 
 echo
 
