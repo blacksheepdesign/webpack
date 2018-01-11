@@ -86,10 +86,10 @@ curpath=${PWD}
 cd .upgrade/webpack-bsd-master
 npm install
 
+./utils/expect-script.sh
 
 cd $curpath
 
-echo $curpath
 
 # mv ./upgrade/bootstrap.sh bootstrap.sh
 # mv ./upgrade/Vagrantfile Vagrantfile
