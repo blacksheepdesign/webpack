@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- PHP functions used by WordPress. Is ignored in development mode. -->
+    <?php wp_head(); ?>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>{{ name }}</title>
@@ -8,5 +10,6 @@
   <body>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <?php wp_footer(); ?>
   </body>
 </html>

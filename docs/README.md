@@ -1,22 +1,20 @@
 # Introduction
 
-This is the vue/webpack starter project used by Blacksheepdesign. It's based on and tracks [vuejs-templates/webpack](https://github.com/vuejs-templates/webpack) and has many similarities. The reasons we created this starter project was because we needed a specific solution to meet a few additional requirements:
+This is the vue/webpack starter project used by [Blacksheepdesign](https://blacksheepdesign.co.nz). It's based on [vuejs-templates/webpack](https://github.com/vuejs-templates/webpack) and has many similarities, however we created this fork to address a few additional requirements:
 + Ability to build directly into a WordPress theme
-+ Include a series of components frequently used on our websites
++ Include a library of components frequently used on our websites
 + Automatically configure and provision a Vagrant VM with WordPress installed
 + Manage databases, and track the WP MySQL database in the project's git repository
 
-As such, the scope of this template doesn't just cover front end SPA development, but also includes the WordPress as a BaaS provider.
+As such, the scope of this template extends to include backend services in addition to simply front-end SPA development.
 
-In addition to the wider scope, this project does not include and e2e or unit testing features like the official Webpack starter.
-
-This boilerplate is targeted towards large, serious projects and assumes you are somewhat familiar with Webpack and `vue-loader`. Make sure to also read [`vue-loader`'s documentation](https://vue-loader.vuejs.org/) for common workflow recipes.
+For the time being, we have removed e2e and unit testing features. We haven't yet adopted a successful unit testing workflow in our site development process.
 
 ## Quickstart
 
 To use this template, scaffold a project with [vue-cli](https://github.com/vuejs/vue-cli). **It is recommended to use npm 3+ for a more efficient dependency tree.**
 
 ``` bash
-$ npm install -g vue-cli
+$ npm install -g vue-cli # You must install vue-cli in order to use this boilerplate
 $ vue init blacksheepdesign/webpack-bsd my-project
 ```

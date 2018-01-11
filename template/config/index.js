@@ -46,7 +46,7 @@ module.exports = {
 
   build: {
     // Template for index.html
-    index: path.resolve(__dirname, '../html/wp-content/themes/{{ name }}/index.html'),
+    index: path.resolve(__dirname, '../html/wp-content/themes/{{ name }}/index.php'),
 
     // Paths
     assetsRoot: path.resolve(__dirname, '../html/wp-content/themes/{{ name }}'),

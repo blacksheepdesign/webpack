@@ -11,7 +11,7 @@
     {{#lint}}
     "lint": "eslint --ext .js,.vue src",
     {{/lint}}
-    "build": "vagrant up && node build/build.js"
+    "build": "node build/build.js"
   },
   "dependencies": {
     "vue": "^2.5.2"{{#router}},

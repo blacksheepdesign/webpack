@@ -21,9 +21,14 @@
 ├── .eslintignore               # eslint ignore rules
 ├── .gitignore                  # sensible defaults for gitignore
 ├── .postcssrc.js               # postcss config
+├── bootstrap.sh                # Vagrant bootstrap script
+├── hosts-down.sh               # remove site from local hosts file
+├── hosts-up.sh                 # add site to local hosts file
 ├── index.html                  # index.html template
 ├── package.json                # build scripts and dependencies
-└── README.md                   # Default README file
+├── README.md                   # default README file
+├── Vagrantfile                 # Vagrant configuration file
+└── wordpress.sh                # Wordpress install script for Vagrant
 ```
 
 ### `build/`
@@ -32,7 +37,7 @@ This directory holds the actual configurations for both the development server a
 
 ### `config/index.js`
 
-This is the main configuration file that exposes some of the most common configuration options for the build setup. See [API Proxying During Development](proxy.md) and [Integrating with Backend Framework](backend.md) for more details.
+This is the main configuration file that exposes some of the most common configuration options for the build setup. See [API Proxying During Development](proxy.md) and [Integratiion with Wordpress](backend.md) for more details.
 
 ### `src/`
 

@@ -1,4 +1,4 @@
-# Integrating with Backend Framework
+# Integrating with Wordpress
 
 :warning: This section will be updated soon to reflect built-in WordPress integration.
 

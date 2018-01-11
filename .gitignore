@@ -4,3 +4,4 @@ docs/_book
 test/
 .vagrant/
 *.box
+.upgrade/
