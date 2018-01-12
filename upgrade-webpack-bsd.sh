@@ -50,7 +50,6 @@ echo
 # Replace files with new versions
 ################
 echo "# Running install script ..."
-echo "# Make sure you use the same settings as in your package.json!"
 echo "# ========================"
 echo
 
@@ -76,26 +75,19 @@ else
 	PACKAGE_LINT=false
 fi
 
-echo $PACKAGE_NAME
-echo $PACKAGE_DESCRIPTION
-echo $PACKAGE_LINT
-echo $PACKAGE_AUTHOR
-
 curdir=${PWD##*/}
 curpath=${PWD}
 cd .upgrade/webpack-bsd-master
 npm install
 
-./utils/expect-script.sh
+./utils/expect-script.sh "$PACKAGE_NAME" "$PACKAGE_DESCRIPTION" "$PACKAGE_AUTHOR"
+
+echo $PACKAGE_NAME
+
+cd $PACKAGE_NAME
+npm install
 
 cd $curpath
-
-
-# mv ./upgrade/bootstrap.sh bootstrap.sh
-# mv ./upgrade/Vagrantfile Vagrantfile
-# mv ./upgrade/wordpress.sh wordpress.sh
-# rm -rf build/
-# mv ./upgrade/build/ build/
 
 
 ################
