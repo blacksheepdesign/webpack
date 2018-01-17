@@ -118,6 +118,10 @@ const webpackConfig = merge(baseWebpackConfig, {
       {
         from: path.resolve(__dirname, '../style.css'),
         to: config.build.assetsRoot
+      },
+      {
+        from: path.resolve(__dirname, '../functions.php'),
+        to: config.build.assetsRoot
       }
     ])
   ]
