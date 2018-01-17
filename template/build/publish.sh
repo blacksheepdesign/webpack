@@ -64,18 +64,12 @@ else
 
       ssh $REMOTE "cd /var/www/${publish_domain}/site_files/htdocs/ && wp core download && wp core config --dbname=$DB_NAME --dbpass=$DB_PASSWORD --dbuser=$DB_USER"
 
-      echo
-      printf "# ${GREEN}Cleaning up ...${NC}\n"
-      ssh $REMOTE "rm /tmp/dev-database.sql"
-      echo
-
       printf "# ${GREEN}Wordpress has been configured.${NC}\n"
-      echo
-      echo '    You should login to http://{{ name }}.blacksheep.design/ and set a site name, a user and permalinks before continuing.'
-      echo "    This script will now exit, however when you're ready to continue you can re-run this script to continue pushing the site live."
-      echo
-      #exit 0
+
     fi
+
+    echo
+    printf "# ${GREEN}Installing database and copying files ...${NC}\n"
 
     ssh $REMOTE "cd /var/www/${publish_domain}/site_files/htdocs/ && mysql --database $DB_NAME -u $DB_USER -p$DB_PASSWORD < /tmp/dev-database.sql && wp search-replace '{{ name }}-local.bsd.nz' '$publish_domain' > /dev/null"
 
@@ -85,6 +79,9 @@ fi
 
 rsync -r html/wp-content/themes/{{ name }}/ $REMOTE:/var/www/${publish_domain}/site_files/htdocs/wp-content/themes/{{ name }}/
 
+echo
+printf "# ${GREEN}Cleaning up ...${NC}\n"
+ssh $REMOTE "rm /tmp/dev-database.sql"
 echo
 
 printf "# ${GREEN}Done!${NC}\n"
