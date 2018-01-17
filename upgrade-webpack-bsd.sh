@@ -193,6 +193,7 @@
 		mv .upgrade/webpack-bsd-master/$PACKAGE_NAME/functions.php functions.php
 	fi
 
+	mv .upgrade/webpack-bsd-master/$PACKAGE_NAME/index.html index.html
 	echo
 
 
