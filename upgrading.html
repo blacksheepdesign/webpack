@@ -1,0 +1,428 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Upgrading · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="prerender.html" />
+    
+    
+    <link rel="prev" href="backend.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="structure.html">
+            
+                <a href="structure.html">
+            
+                    
+                    Project Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="commands.html">
+            
+                <a href="commands.html">
+            
+                    
+                    Build Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="babel.html">
+            
+                <a href="babel.html">
+            
+                    
+                    Babel Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="linter.html">
+            
+                <a href="linter.html">
+            
+                    
+                    Linter Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="pre-processors.html">
+            
+                <a href="pre-processors.html">
+            
+                    
+                    Pre-Processors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="static.html">
+            
+                <a href="static.html">
+            
+                    
+                    Handling Static Assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="env.html">
+            
+                <a href="env.html">
+            
+                    
+                    Environment Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="backend.html">
+            
+                <a href="backend.html">
+            
+                    
+                    Integrate with Wordpress
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10" data-path="upgrading.html">
+            
+                <a href="upgrading.html">
+            
+                    
+                    Upgrading
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="prerender.html">
+            
+                <a href="prerender.html">
+            
+                    
+                    Prerendering for SEO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="docs.html">
+            
+                <a href="docs.html">
+            
+                    
+                    Editing the Docs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Upgrading</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="upgrading-template">Upgrading template</h1>
+<p>It&apos;s possible to update your project to the latest version of this template. The update script will keep back commonly edited areas of the template, and apply updates to everything else.</p>
+<h2 id="simple-upgrade">Simple upgrade</h2>
+<p>To run the update script, enter this command at the root level of your project.</p>
+<pre><code class="lang-sh">curl <span class="hljs-_">-s</span> https://raw.githubusercontent.com/blacksheepdesign/webpack-bsd/master/upgrade-webpack-bsd.sh | bash <span class="hljs-_">-s</span>
+</code></pre>
+<h2 id="options">Options</h2>
+<p>If you would like to force the update script to skip certain files, you have the option to do so by supplying one of the following arguments at the end of the command.</p>
+<p>E.g.</p>
+<pre><code class="lang-sh">curl <span class="hljs-_">-s</span> https://raw.githubusercontent.com/blacksheepdesign/webpack-bsd/master/upgrade-webpack-bsd.sh | bash <span class="hljs-_">-s</span> --skip-build-dir
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--skip-build-dir</code></td>
+<td>Ignores the entire <code>build/</code> directory. Useful if you have made adjustments to the build scripts, although typically this is not recommended. Instead create a feature request on the template itself.</td>
+</tr>
+<tr>
+<td><code>--skip-config-dir</code></td>
+<td>Ignores the entire <code>config/</code> directory. Include this if you have made updates to the config/index.js file.</td>
+</tr>
+<tr>
+<td><code>--skip-config-env</code></td>
+<td>Leaves <code>config/dev.env.js</code> and <code>config/prod.env.js</code> as-is, but upgrades <code>index.js</code>, unless <code>--skip-config-dir</code> is set.</td>
+</tr>
+<tr>
+<td><code>--skip-settings</code></td>
+<td>Ignores all root-level settings files (e.g. <code>.babelrc</code>, <code>.editorconfig</code>, <code>.eslintrc.js</code>, <code>postcssrc.js</code>). Include this if you&apos;ve changed the default configurations.</td>
+</tr>
+<tr>
+<td><code>--skip-vagrant</code></td>
+<td>Ignores all Vagrant-related files. For instance, you have added a custom trigger to Vagrant that shouldn&apos;t be overwritten.</td>
+</tr>
+<tr>
+<td><code>--skip-npm</code></td>
+<td>Prevents the script from updating NPM modules.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="comparing-changes">Comparing changes</h2>
+<p>It is sometimes useful to see the differences between your local project and the template. It&apos;s useful in cases where you would want to check certain parts of your project for changes, to see if it&apos;s safe to run the upgrade script. To do so, you can run the following commands:</p>
+<pre><code class="lang-sh">git remote add <span class="hljs-_">-f</span> template https://github.com/blacksheepdesign/webpack-bsd.git
+git remote update
+git diff master remotes/template/master
+git remote rm template
+</code></pre>
+<p>See the <a href="https://git-scm.com/docs/git-diff" target="_blank">git diff documentation</a> to see how to use the diff command.</p>
+<h2 id="editing-the-upgrade-script">Editing the upgrade script</h2>
+<p>Each time a new version of the template is pushed, it&apos;s important to ensure the upgrade script makes the appropriate updates to apply changes. There are no rules around how updates are applied, but it might be useful to include a function to check if there are any unexpected changes to files before running the replace.</p>
+<p>Near the bottom of the file <code>upgrade-webpack-bsd.sh</code> there is a section titled <em>REPLACE OUTDATED FILES</em>. Add any file operations that are required here. The script creates a temporary directory structure <code>.upgrade/webpack-bsd-master/$PACKAGE_NAME/build</code>. In this directory is a built version of the <code>template/</code> directory, as if the install script had been run for the first time. You should use this directory to copy any updated files.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="backend.html" class="navigation navigation-prev " aria-label="Previous page: Integrate with Wordpress">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="prerender.html" class="navigation navigation-next " aria-label="Next page: Prerendering for SEO">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Upgrading","level":"1.10","depth":1,"next":{"title":"Prerendering for SEO","level":"1.11","depth":1,"path":"prerender.md","ref":"prerender.md","articles":[]},"previous":{"title":"Integrate with Wordpress","level":"1.9","depth":1,"path":"backend.md","ref":"backend.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"upgrading.md","mtime":"2018-01-14T21:58:17.310Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-17T22:21:43.807Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
