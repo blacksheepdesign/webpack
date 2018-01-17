@@ -11,7 +11,8 @@
     {{#lint}}
     "lint": "eslint --ext .js,.vue src",
     {{/lint}}
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "publish": "./build/publish.sh"
   },
   "dependencies": {
     "vue": "^2.5.2"{{#router}},
