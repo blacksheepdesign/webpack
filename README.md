@@ -6,9 +6,9 @@
 
 ## Documentation
 
-TBD - We are currently working on documentation for this template. For now, most questions can be answered with the webpack/vue template docs below.
+The documentation is still in progress, but you may find these links useful.
 
-- [For the vuejs-templates/webpack](http://vuejs-templates.github.io/webpack): common questions specific to this template are answered and each part is described in greater detail
+- [For webpack-bsd](https://blacksheepdesign.github.io/webpack-bsd/): common questions specific to this template are answered and each part is described in greater detail
 - [For Vue 2.0](http://vuejs.org/guide/): general information about how to work with Vue, not specific to this template
 
 ## Usage
@@ -19,7 +19,6 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 $ npm install -g vue-cli
 $ vue init blacksheepdesign/webpack-bsd my-project
 $ cd my-project
-$ npm install
 $ npm run dev
 ```
 
@@ -36,12 +35,21 @@ The development server will run on port 8080 by default. If that port is already
   - Lint-on-save with ESLint
   - Source maps
 
+- `npm run init`: Provision Vagrant
+  - wp-cli installed
+  - LAMP stack installed and configured
+  - Latest version of Wordpress is installed
+
 - `npm run build`: Production ready build.
   - JavaScript minified with [UglifyJS v3](https://github.com/mishoo/UglifyJS2/tree/harmony).
   - HTML minified with [html-minifier](https://github.com/kangax/html-minifier).
   - CSS across all components extracted into a single file and minified with [cssnano](https://github.com/ben-eb/cssnano).
   - Static assets compiled with version hashes for efficient long-term caching, and an auto-generated production `index.html` with proper URLs to these generated assets.
   - Use `npm run build --report`to build with bundle size analytics.
+
+- `npm run publish`: Push your current build to a live server
+  - Exports the database from the Vagrant machine
+  - Pushes the theme directory and optionally the database to a remote server
 
 ### Fork It And Make Your Own
 

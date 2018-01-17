@@ -8,6 +8,7 @@
 - [Handling Static Assets](static.md)
 - [Environment Variables](env.md)
 - [Integrate with Wordpress](backend.md)
-- [API Proxying During Development](proxy.md)
+<!-- - [API Proxying During Development](proxy.md) -->
+- [Upgrading](upgrading.md)
 - [Prerendering for SEO](prerender.md)
 - [Editing the Docs](docs.md)

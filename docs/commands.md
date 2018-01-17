@@ -12,6 +12,10 @@ All build commands are executed via [NPM Scripts](https://docs.npmjs.com/misc/sc
 - Lint-on-save with ESLint
 - Source maps
 
+### `npm run init`
+
+> Runs vagrant up. This provisions Wordpress and installs the database, web server, PHP etc. Make sure to run `vagrant destroy` once you are finished with your project, as keeping vagrant machines alive will use a lot of disk space!
+
 ### `npm run build`
 
 > Build assets for production. See [Integrating with Backend Framework](backend.md) for more details.
@@ -24,3 +28,4 @@ All build commands are executed via [NPM Scripts](https://docs.npmjs.com/misc/sc
 ### `npm run lint`
 
 > Runs eslint and reports any linting errors in your code. See [Linter Configuration](linter.md)
+

@@ -1,10 +1,12 @@
 # Project Structure
 
+**Avoid editing files with an asterisk as changes will not be kept when the updater is run. If you need to make a change, it's likely the original template could instead be edited to accommodate your requirement. If it's a special case, you can run the updater with one of the --skip options each time, however this can lead to incompatibilities long-term.**
+
 ``` bash
 .
-├── build/                      # webpack config files
+├── build/                *     # webpack config files
 │   └── ...
-├── config/
+├── config/               *
 │   ├── index.js                # main project config
 │   └── ...
 ├── src/
@@ -15,20 +17,22 @@
 │   └── assets/                 # module assets (processed by webpack)
 │       └── ...
 ├── static/                     # pure static assets (directly copied)
-├── .babelrc                    # babel config
-├── .editorconfig               # indentation, spaces/tabs and similar settings for your editor
-├── .eslintrc.js                # eslint config
+├── .babelrc              *     # babel config
+├── .editorconfig         *     # indentation, spaces/tabs and similar settings for your editor
+├── .eslintrc.js          *     # eslint config
 ├── .eslintignore               # eslint ignore rules
 ├── .gitignore                  # sensible defaults for gitignore
-├── .postcssrc.js               # postcss config
-├── bootstrap.sh                # Vagrant bootstrap script
-├── hosts-down.sh               # remove site from local hosts file
-├── hosts-up.sh                 # add site to local hosts file
-├── index.html                  # index.html template
+├── .postcssrc.js         *     # postcss config
+├── bootstrap.sh          *     # Vagrant bootstrap script
+├── functions.php               # WordPress functions file (directly copied)
+├── hosts-down.sh         *     # remove site from local hosts file
+├── hosts-up.sh           *     # add site to local hosts file
+├── index.html            *     # index.html template
 ├── package.json                # build scripts and dependencies
 ├── README.md                   # default README file
-├── Vagrantfile                 # Vagrant configuration file
-└── wordpress.sh                # Wordpress install script for Vagrant
+├── style.css                   # WordPress stylesheet
+├── Vagrantfile           *     # Vagrant configuration file
+└── wordpress.sh          *     # Wordpress install script for Vagrant
 ```
 
 ### `build/`
