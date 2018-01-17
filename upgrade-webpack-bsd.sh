@@ -107,9 +107,7 @@
 	cd .upgrade/webpack-bsd-master
 	npm install
 
-	../../../utils/expect-script.sh "$PACKAGE_NAME" "$PACKAGE_DESCRIPTION" "$PACKAGE_AUTHOR"
-
-	# ./utils/expect-script.sh "$PACKAGE_NAME" "$PACKAGE_DESCRIPTION" "$PACKAGE_AUTHOR"
+	./utils/expect-script.sh "$PACKAGE_NAME" "$PACKAGE_DESCRIPTION" "$PACKAGE_AUTHOR"
 
 	cd $curpath
 
@@ -185,6 +183,14 @@
 		npm install
 	else
 		printf "# ${GREEN}Skipping update of NPM modules ...${NC}\n"
+	fi
+
+	if [[ ! -f style.css ]]; then
+		mv .upgrade/webpack-bsd-master/$PACKAGE_NAME/style.css style.css
+	fi
+
+	if [[ ! -f functions.php ]]; then
+		mv .upgrade/webpack-bsd-master/$PACKAGE_NAME/functions.php functions.php
 	fi
 
 	echo
