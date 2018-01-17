@@ -74,10 +74,10 @@ else
       echo '    You should login to http://{{ name }}.blacksheep.design/ and set a site name, a user and permalinks before continuing.'
       echo "    This script will now exit, however when you're ready to continue you can re-run this script to continue pushing the site live."
       echo
-      exit 0
+      #exit 0
     fi
 
-    ssh $REMOTE "cd /var/www/${publish_domain}/site_files/htdocs/ && mysql --database $DB_NAME -u $DB_USER -p$DB_PASSWORD < /tmp/dev-database.sql && wp search-replace '{{ name }}-local.bsd.nz' '{{ name }}.blacksheep.design' > /dev/null"
+    ssh $REMOTE "cd /var/www/${publish_domain}/site_files/htdocs/ && mysql --database $DB_NAME -u $DB_USER -p$DB_PASSWORD < /tmp/dev-database.sql && wp search-replace '{{ name }}-local.bsd.nz' '$publish_domain' > /dev/null"
 
   fi
 
